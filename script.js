@@ -112,7 +112,7 @@ async function highlightSorted() {
     const bars = document.querySelectorAll('.bar');
     for (let i = 0; i < bars.length; i++) {
         bars[i].style.backgroundColor = 'green';
-        await sleep(50);
+        await sleep(25);
     }
 }
 
