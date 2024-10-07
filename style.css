@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#arrayContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    height: 300px;
+}
+
+.bar {
+    width: 30px;
+    margin: 0 2px;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    transition: height 0.3s, background-color 0.1s;
+}
+
+.bar.compare {
+    background-color: #f39c12;
+}
+
+.bar.swap {
+    background-color: #e74c3c;
+}
+
+.bar span {
+    font-size: 14px;
+}
+
+.count-highlight {
+    background-color: yellow;
+    transition: background-color 0.1s ease;
+}
+
+.move-highlight {
+    background-color: lightgreen;
+    transition: background-color 0.1s ease;
+}
+
+.select-dropdown {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f0f4f8;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.select-dropdown::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    color: #007bff;
+    pointer-events: none;
+}
+
+.select-dropdown:hover {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.select-dropdown:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+    .select-dropdown,
+    .button {
+        font-size: 14px;
+    }
+}
